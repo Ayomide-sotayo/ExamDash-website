@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import PhoneMockup from "../components/PhoneMockup";
-import { Section } from "../components/Shared";
+import { Link } from "react-router-dom";
+import heroBg from "../assets/hero-bg.jpg";
+import faqPhoneImg from "../assets/faq-phone.png";
+import waitlistPhoto from "../assets/waitlist-photo.jpg";
 
 function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,18 +10,18 @@ function FAQItem({ question, answer }) {
   return (
     <div className="border-b border-gray-100 last:border-0">
       <button
-        className="w-full flex items-center justify-between py-6 text-left focus:outline-none"
+        className="w-full flex items-center justify-between py-4 sm:py-5 text-left focus:outline-none group cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-semibold text-gray-900 text-base md:text-lg">
+        <span className="font-roboto font-semibold text-gray-700 text-sm sm:text-base md:text-[30px] transition-colors pr-4">
           {question}
         </span>
-        <span className="text-gray-900 text-2xl font-light ml-4">
+        <span className="text-gray-700 text-[50px] font-light shrink-0 transition-colors">
           {isOpen ? "−" : "+"}
         </span>
       </button>
       {isOpen && (
-        <div className="pb-6 text-gray-600 text-sm md:text-base leading-relaxed pr-8">
+        <div className="font-poppins pb-4 sm:pb-5 text-gray-500 text-xs sm:text-sm md:text-[20px] leading-relaxed pr-6">
           {answer}
         </div>
       )}
@@ -32,7 +34,7 @@ export default function FAQ() {
     {
       question: "What is ExamDash and how does it work?",
       answer: (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           <p>
             ExamDash is a professional exam-readiness platform that helps
             candidates assess how prepared they are for supported professional
@@ -50,110 +52,121 @@ export default function FAQ() {
     {
       question: "Who is ExamDash designed for?",
       answer:
-        "ExamDash is designed for ambitious professionals seeking to pass rigorous certification and licensing exams with confidence, eliminating guesswork from their preparation strategy.",
+        "ExamDash is designed for candidates studying for demanding professional certifications and licensing exams who need an objective, data-backed assessment of their progress rather than just counting completed questions.",
     },
     {
       question: "When will ExamDash be available to download?",
       answer:
-        "We are currently in a closed beta phase for select pathways. Public launch dates will be announced to our waitlist first.",
+        "The Android BETA is available for download on our website now for eligible testing pathways. Additional platforms and pathways will be rolled out progressively.",
     },
     {
       question: "How much will ExamDash cost?",
       answer:
-        "Pricing details will be released closer to our public launch. We aim to offer flexible plans that provide maximum value for your exam preparation.",
+        "Beta access is currently free for invited participants. Transparent, flexible pricing tiers for supported exam pathways will be announced prior to public general release.",
+    },
+    {
+      question: "Which exams are currently supported?",
+      answer:
+        "ExamDash is currently operating the PEBC Qualifying Examination beta pathway, with additional healthcare, project management, and finance certifications scheduled for rollout.",
     },
     {
       question: "How does the Readiness Score work?",
       answer:
-        "The Readiness Score is a dynamic metric calculated using spacing algorithms, your performance in drills, mock exams, and self-assessments. It continuously updates to reflect your true preparedness level.",
+        "The Readiness Score is a composite, weighted index calculated from accuracy under pressure, clinical judgment drills, spaced repetition recall intervals, and domain mastery trends.",
     },
     {
       question: "How is ExamDash different from other exam prep tools?",
       answer:
-        "While traditional tools focus solely on providing content, ExamDash focuses on your *readiness*. We guide you on exactly what to study and when, adapting to your specific weaknesses.",
+        "Traditional tools simply test raw facts with repetitive banks. ExamDash connects diagnostics, active recall games, scenario-based drills, and trend metrics into one continuous readiness loop.",
     },
     {
       question: "Is my personal data secure and private?",
       answer:
-        "Yes, we adhere to strict privacy protocols. Your data is encrypted and only used to improve your personal study pathway and application experience.",
+        "Yes. ExamDash handles study analytics and personal profile data with industry-standard encryption, strictly in compliance with our Privacy Policy. Your data is never sold or shared with third parties.",
     },
     {
       question: "Can I use ExamDash offline?",
       answer:
-        "Current beta versions require an internet connection, but we are exploring offline capabilities for key drill sets and flashcards in future updates.",
+        "Core recall drills and downloaded task packs can be completed offline and sync your performance history automatically the next time you connect to the internet.",
     },
     {
       question: "How long does it take to set up my study plan?",
       answer:
-        "Setup takes less than 5 minutes. Once you select your exam and take the initial diagnostic, your personalized path is automatically generated.",
+        "Setup takes less than 3 minutes. Choose your target examination, set your test date, and complete a quick diagnostic to receive your customized daily sprint recommendations.",
     },
   ];
 
   return (
-    <div className="bg-white text-gray-900 font-sans overflow-x-hidden pt-24 pb-16">
-      {/* ── TOP SECTION (Heading + Phone) ───────────────── */}
-      <Section className="py-0 md:py-0 mb-20 md:mb-32">
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+    <div className="bg-[#FCFCFC] text-gray-900 font-sans overflow-x-hidden pt-32 sm:pt-40 pb-16">
+      {/* ── TOP SECTION (Heading Left + Phone Right) ───────────────── */}
+      <section className="w-full md:max-w-[1157px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-16 sm:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
           {/* Left Column */}
-          <div className="flex flex-col gap-6">
-            <h1 className="text-4xl md:text-5xl font-black leading-tight text-gray-900">
+          <div className="flex flex-col justify-center">
+            <h1 className="text-3xl sm:text-[52px] font-semibold sm:font-semibold font-gluten text-gray-700 leading-tight mb-4">
               Questions Before
               <br />
               You Start?
             </h1>
-            <p className="text-gray-600 leading-relaxed text-sm max-w-md">
+            <p className="text-gray-500 text-xs font-poppins sm:text-sm md:text-base leading-relaxed max-w-md">
               Find answers about exam readiness, the PEBC beta pathway, ExamDash
               features, Android installation, privacy and support.
             </p>
           </div>
 
-          {/* Right Column (Phone in Grey Box) - matches waitlist style */}
-          <div className="bg-gray-50 rounded-[40px] p-8 flex items-center justify-center min-h-[400px] overflow-hidden">
-            <div className="rotate-12 translate-y-12">
-              <PhoneMockup screenBg="bg-white" className="shadow-2xl" />
-            </div>
+          {/* Right Column (Phone Graphic Card) */}
+          <div className="flex justify-center items-center sm:max-w-[512px] sm:h-[345px]">
+            <img
+              src={faqPhoneImg}
+              alt="ExamDash FAQ Preview"
+              className="w-full max-w-[340px]  md:max-w-[480px] h-auto  object-contain"
+            />
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ── FAQ ACCORDION LIST ───────────────────────────── */}
-      <Section className="py-0 md:py-0 mb-32">
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-[0_4px_40px_-10px_rgba(0,0,0,0.05)] border border-gray-100">
-          <div className="flex flex-col">
+      <section className="w-full max-w-[1157px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-20 sm:mb-28">
+        <div className="bg-white rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 md:p-10 shadow-2xs border border-gray-100/80">
+          <div className="flex flex-col divide-y divide-gray-100">
             {faqs.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-              />
+              <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ── PHOTO CTA BOTTOM SECTION ─────────────────────── */}
-      <Section className="py-0 md:py-0">
-        <div className="relative rounded-[40px] overflow-hidden max-w-6xl mx-auto min-h-[400px] flex items-center justify-center text-center px-4">
-          {/* Background image placeholder */}
-          <div className="absolute inset-0 bg-slate-900">
-            <div className="absolute inset-0 bg-black/50 z-10" />
-          </div>
+      <section className="w-full max-w-[1228px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-12 sm:mb-16">
+        <div className="relative rounded-[16px] sm:rounded-[16px]  overflow-hidden min-h-[901px] sm:min-h-[583px] flex flex-col justify-center items-center text-center p-6 sm:p-10 md:p-14 shadow-2xl">
+          {/* Background photo */}
+          <img
+            src={waitlistPhoto}
+            alt="ExamDash Readiness Experience"
+            className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+          />
+          {/* Cinematic dark overlay */}
+          <div className="absolute inset-0 bg-black/65 pointer-events-none" />
 
-          <div className="relative z-20 flex flex-col items-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          {/* Centered Typography & CTA */}
+          <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center md:-mb-56">
+            <h2 className="text-2xl sm:text-[48px]  font-semibold sm:font-medium md:w-[880px] text-white leading-tight mb-3 sm:mb-4 drop-shadow-md">
               Start With a Clearer Picture.
             </h2>
-            <p className="text-gray-200 text-sm mb-8">
+            <p className="text-white/85 text-xs font-poppins1 md:font-poppins sm:text-[46px] max-w-[336px] sm:max-w-[652px] mb-7 sm:mb-8 leading-relaxed drop-shadow">
               You are already investing effort in your examination.
-              <br />
+              <br   className="hidden md:inline-block"/>
               ExamDash helps you understand what that effort is producing.
             </p>
-            <button className="bg-[linear-gradient(180deg,#FF5C3D_0%,#FF2C67_100%)] hover:opacity-90 hover:shadow-lg transition-all border-0 text-white font-bold text-sm px-8 py-3.5 rounded-full transition-colors">
+            <Link
+              to="/waitlist"
+              className="bg-[linear-gradient(180deg,#FF5C3D_0%,#FF2C67_100%)] hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] text-white font-semibold text-xs sm:text-sm md:text-base px-8 sm:px-10 py-3 sm:py-3.5 rounded-full shadow-xl transition-all duration-200"
+            >
               Join the waitlist
-            </button>
+            </Link>
           </div>
         </div>
-      </Section>
+      </section>
     </div>
   );
 }

@@ -1,134 +1,144 @@
 import React from "react";
-import PhoneMockup from "../components/PhoneMockup";
-import { Section } from "../components/Shared";
 import { Link } from "react-router-dom";
+import aboutPhoneImg from "../assets/about-phone.png";
 
 export default function About() {
   return (
-    <div className="bg-white text-gray-900 font-sans overflow-x-hidden pt-24 pb-16">
+    <div className="bg-[#FCFCFC] text-gray-900 font-sans overflow-x-hidden pt-32 sm:pt-40  pb-16">
       {/* ── HEADER ────────────────────────── */}
-      <div className="px-4 max-w-4xl mx-auto mb-20 md:mb-32">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900 mb-6">
-          We Built ExamDash for the Question
-          <br />
-          Study Tools Leave Unanswered.
-        </h1>
-        <p className="text-gray-600 leading-relaxed text-sm max-w-2xl">
-          Candidates can track hours, chapters and scores. The harder question
-          <br />
-          is what all of that means for exam readiness.
-        </p>
-      </div>
+      <section className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
+        <div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold sm:font-bold md:font-semibold text-gray-700 leading-[1.18] mb-4">
+            We Built ExamDash for the Question
+            <br className="hidden sm:inline" /> Study Tools Leave Unanswered.
+          </h1>
+          <p className="text-gray-500 font-poppins text-sm sm:text-base leading-relaxed max-w-xl md:max-w-[734px]" style={{ lineHeight: "30px" }}>
+            Candidates can track hours, chapters and scores. The harder question
+            is what all of that means for exam readiness.
+          </p>
+        </div>
+      </section>
 
-      {/* ── MISSION SECTION (Text + Phone) ─────────────────────────────── */}
-      <Section className="py-0 md:py-0 mb-32">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+      {/* ── FIRST SECTION (Text Left, Phone Right) ───────────── */}
+      <section className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="flex flex-col justify-center">
+            <h2 className="text-2xl sm:text-3xl font-roboto font-semibold sm:font-bold text-gray-700 leading-tight mb-4">
               Help Candidates Understand Their
-              <br />
-              Preparation Before Exam Day.
+              <br className="hidden sm:inline" /> Preparation Before Exam Day.
             </h2>
-            <div className="flex flex-col gap-4 text-gray-600 text-sm leading-relaxed">
-              <p>
-                We want professional exam candidates to make preparation
-                decisions with more clarity and less guesswork.
-              </p>
-              <p>
-                ExamDash is building a platform where assessment, practice, weak
-                areas and progress contribute to one connected readiness
-                journey. The aim is not to replace hard work, it is to help
-                candidates understand what their hard work is producing.
-              </p>
+            <p className="text-gray-500 font-poppins text-sm sm:text-[15px] leading-relaxed mb-4">
+              We want professional exam candidates to make preparation
+              decisions with more clarity and less guesswork.
+            </p>
+            <p className="text-gray-500 font-poppins text-sm sm:text-[15px] leading-relaxed mb-8">
+              ExamDash is building a platform where assessment, practice, weak
+              areas and progress contribute to one connected readiness journey.
+              The aim is not to replace hard work. It is to help candidates
+              understand what their hard work is producing.
+            </p>
+            <div>
+              <Link
+                to="/features"
+                className="inline-block bg-[linear-gradient(180deg,#FF5C3D_0%,#FF2C67_100%)] hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] text-white font-semibold font-poppins text-[20px] px-12 py-3 rounded-full shadow-md transition-all duration-200"
+              >
+                Explore Features
+              </Link>
             </div>
-            <Link
-              to="/features"
-              className="self-start mt-2 bg-[linear-gradient(180deg,#FF5C3D_0%,#FF2C67_100%)] hover:opacity-90 hover:shadow-lg transition-all border-0 text-white font-semibold px-6 py-2.5 rounded-full transition-colors text-sm"
-            >
-              Explore Features
-            </Link>
           </div>
-          <div className="flex justify-center md:justify-end">
-            <div className="rotate-12 translate-x-8">
-              <PhoneMockup screenBg="bg-red-500" className="shadow-2xl" />
-            </div>
+
+          <div className="flex justify-center items-center">
+            <img
+              src={aboutPhoneImg}
+              alt="Help Candidates Understand Their Preparation Before Exam Day"
+              className="w-full max-w-[500px] h-auto object-contain"
+            />
           </div>
         </div>
-      </Section>
+      </section>
 
-      {/* ── THE PROBLEM (Text + Text) ─────────────────────────────── */}
-      <Section className="py-0 md:py-0 mb-32">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mt-1">
+      {/* ── SECOND SECTION (Statement Left, 3 Paragraphs Right) ───────────── */}
+      <section className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div className="flex flex-col justify-center mb-6 md:mb-0 md:h-full">
+            <h2 className="text-2xl font-roboto sm:text-3xl font-semibold sm:font-bold text-gray-700 leading-snug">
               The preparation contains plenty of content, but it needs to be
               clearer and more detailed for better understanding.
             </h2>
           </div>
-          <div className="flex flex-col gap-6 text-gray-600 text-sm leading-relaxed">
-            <p>
+
+          <div className="flex flex-col gap-5 font-poppins text-gray-500 text-sm sm:text-[15px] leading-relaxed">
+            <p className="max-w-xl md:max-w-[734px]" style={{ lineHeight: "32px", fontSize: "20px" }}>
               The problem is not always access to information. Professional exam
               candidates can find books, videos, notes, questions and online
-              advice. The problem is knowing how those separate activities add
-              up.
+              advice. The problem is knowing how those separate activities add up.
             </p>
-            <p>
+            <p className="max-w-xl md:max-w-[734px]" style={{ lineHeight: "32px", fontSize: "20px" }}>
               Different examinations require different knowledge, question types
               and professional judgement. ExamDash does not treat every exam as
               the same — the platform provides a shared readiness structure
               while each pathway supplies the relevant preparation content and
               activities.
             </p>
-            <p>
+            <p style={{ lineHeight: "32px", fontSize: "20px" }}>
               Starting with one pathway allows ExamDash to improve the product
               experience, readiness methodology and preparation flow before
               expanding responsibly. More pathways will be announced when they
-              are ready — not simply when they are planned.
+              are ready—not simply when they are planned.
             </p>
           </div>
         </div>
-      </Section>
+      </section>
 
+      <hr className="border-gray-400" />
       {/* ── CORE PRINCIPLES (2x2 Grid) ─────────────────────────────── */}
-      <Section className="py-0 md:py-0 bg-gray-50 rounded-3xl py-16 px-8 max-w-6xl mx-auto mb-12">
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-12">
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Clarity</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Activity is not the same as progress. Show candidates what their
-              work adds up to.
-            </p>
-          </div>
+      <section className="w-full max-w-[1240px] mx-auto py-10 px-4 sm:px-6 lg:px-8 mb-16 sm:mb-20">
+        <div className="bg-[#f5f5f740] rounded-[28px] sm:rounded-[36px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-2xs border border-gray-100/80">
+              <h3 className="text-lg sm:text-xl font-roboto font-semibold sm:font-bold text-gray-900 mb-2" style={{ fontSize: "30px" }}>
+                Clarity
+              </h3>
+              <p className="text-gray-500 font-poppins text-xs sm:text-sm leading-relaxed" style={{ lineHeight: "32px", fontSize: "20px" }}>
+                Activity is not the same as progress. Show candidates what their
+                work adds up to.
+              </p>
+            </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Context</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              A score without context can mislead in either direction. Always
-              show what shaped it.
-            </p>
-          </div>
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-2xs border border-gray-100/80">
+              <h3 className="text-lg sm:text-xl font-roboto font-semibold sm:font-bold text-gray-900 mb-2" style={{ fontSize: "30px" }}>
+                Context
+              </h3>
+              <p className="text-gray-500 font-poppins text-xs sm:text-sm leading-relaxed" style={{ lineHeight: "32px", fontSize: "20px" }}>
+                A score without context can mislead in either direction. Always
+                show what shaped it.
+              </p>
+            </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              Improvement
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Mistakes should remain useful. Readiness should evolve as
-              preparation evolves.
-            </p>
-          </div>
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-2xs border border-gray-100/80">
+              <h3 className="text-lg sm:text-xl font-roboto font-semibold sm:font-bold text-gray-900 mb-2" style={{ fontSize: "30px" }}>
+                Improvement
+              </h3>
+              <p className="text-gray-500 font-poppins text-xs sm:text-sm leading-relaxed" style={{ lineHeight: "32px", fontSize: "20px" }}>
+                Mistakes should remain useful. Readiness should evolve as
+                preparation evolves.
+              </p>
+            </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              Responsibility
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              No platform should promise an examination result it cannot
-              control.
-            </p>
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-2xs border border-gray-100/80">
+              <h3 className="text-lg sm:text-xl font-roboto font-semibold sm:font-bold text-gray-900 mb-2" style={{ fontSize: "30px" }}>
+                Responsibility
+              </h3>
+              <p className="text-gray-500 font-poppins text-xs sm:text-sm leading-relaxed" style={{ lineHeight: "32px", fontSize: "20px" }}>
+                No platform should promise an examination result it cannot
+                control.
+              </p>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
+
+      <hr className="border-gray-400" />
     </div>
   );
 }

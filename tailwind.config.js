@@ -6,6 +6,12 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        Roboto: ["Roboto", "sans-serif"],
+        fredoka: ["Fredoka", "sans-serif"],
+        gluten: ["Gluten", "cursive", "sans-serif"],
+        Gluten: ["Gluten", "cursive", "sans-serif"],
+        jakarta: ["'Plus Jakarta Sans'", "sans-serif"],
       },
     },
   },

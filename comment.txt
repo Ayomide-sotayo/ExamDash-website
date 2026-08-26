@@ -1,0 +1,67 @@
+ explore-button inline-flex items-center justify-center bg-[linear-gradient(180deg,#FF5C3D_0%,#FF2C67_100%)] hover:opacity-90 active:scale-[0.98] text-white font-bold text-xs sm:text-sm px-7 sm:px-8 py-3 rounded-full shadow-md transition-all self-start md:self-auto
+
+
+
+
+ <div className="grid grid-cols-1 lg:grid-cols-2  gap-8 lg:gap-6  items-center">
+              <div className="order-1 flex flex-col justify-center">
+                <h3 className="text-2xl sm:text-3xl  font-semibold  text-gray-900 mb-3">
+                  Home
+                </h3>
+                <p className="text-gray-500 text-sm sm:text-[15px] font-poppins leading-loose  md:w-[560px]  md:text-justify  max-w-lg">
+                  See your Readiness Overview, weak areas, resume drills and a
+                  recommended next action when you open ExamDash instead of an
+                  endless library.
+                </p>
+              </div>
+              <div className="order-2 flex justify-center items-center">
+                <img
+                  src={imgHowHome}
+                  alt="ExamDash Home"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+
+
+
+
+
+```jsx
+<div
+  id="explore"
+  className="
+    relative
+    max-w-[1060px]
+    mx-auto
+    h-[450px]
+    sm:h-[500px]
+    bg-[#ECEEF2]
+    rounded-t-[36px]
+    sm:rounded-t-[44px]
+    rounded-b-[24px]
+    border
+    border-gray-200/60
+    shadow-xs
+    overflow-visible
+  "
+>
+  <img
+    src={featuresPhonesImg}
+    alt="ExamDash Connected Readiness"
+    className="
+      absolute
+      left-1/2
+      -translate-x-1/2
+      top-[-120px]
+      sm:top-[-135px]
+      w-[90%]
+      max-w-[760px]
+      h-auto
+      object-contain
+      drop-shadow-2xl
+      z-10
+    "
+  />
+</div>
+```
