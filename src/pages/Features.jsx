@@ -12,9 +12,9 @@ export default function Features() {
   return (
     <div className="bg-[#FCFCFC] text-gray-900 font-sans overflow-x-hidden pt-32 sm:pt-44 pb-16">
       {/* ── HEADER & HERO MOCKUPS (# Features) ───────────── */}
-      <section className="w-full border-b-2 border-b-gray-300 md:pb-28 mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
+      <section className="w-full  md:pb-28 mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
         <div className="text-center mx-auto mb-10 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold sm:font-medium text-gray-900 leading-[1.2] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-fredoka font-semibold text-gray-900 leading-[1.18] mb-4">
             More Than Study Tools. A
             <br className="hidden sm:inline" /> Connected Readiness Experience.
           </h1>
@@ -25,7 +25,7 @@ export default function Features() {
           <div className="flex justify-center">
             <a
               href="#explore"
-              className="bg-[linear-gradient(180deg,#FF5C3D_0%,#FF2C67_100%)] hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] text-white font-semibold font-poppins text-[20px] px-12 py-3 rounded-full shadow-md transition-all duration-200"
+              className="bg-[linear-gradient(180deg,#FF5C3D_0%,#FF2C67_100%)] hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] text-white font-semibold font-poppins text-sm sm:text-base md:text-[20px] px-8 sm:px-12 py-3.5 sm:py-4 rounded-full shadow-md transition-all duration-200"
             >
               Explore Features
             </a>
@@ -33,18 +33,23 @@ export default function Features() {
         </div>
 
         {/* Showcase Card Frame with exact Figma floating background card & overlapping 3D phones */}
-        <div id="explore" className="relative w-full max-w-[1179px] h-[360px] sm:h-[460px] md:h-[544px] mx-auto flex items-center justify-center">
-          {/* Gray background frame */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] max-w-[986px] h-[75%] bg-[#F2F2F2] rounded-[16px] border-2 border-gray-200 z-0" />
+        <div id="explore" className="relative w-full max-w-[1180px] h-[320px] sm:h-[391px]  mx-auto flex items-end justify-center mt-6 sm:mt-48">
+          {/* Gray background frame (shorter than phones, positioned at bottom) */}
+          <div className="absolute  left-1/2 -translate-x-1/2 w-[92%] max-w-[986px] h-[65%] sm:h-[391px]  bg-[#F2F2F2] rounded-[10px] sm:rounded-[16px] border border-gray-200/80 shadow-2xs z-0 -mb-6 sm:-mb-6" />
+          <div className="absolute  left-1/2 -translate-x-1/2 w-[70%] max-w-[786px] h-[25px] sm:h-[81px]  bg-[#F2F2F2]   z-20 -mb-6 sm:-mb-6" />
 
-          {/* Phone image */}
-          <img
-            src={featuresPhonesImg}
-            alt="ExamDash Connected Readiness"
-            className="absolute inset-0 w-full h-full object-contain object-bottom z-10"
-          />
+          {/* Phone image (aligned to bottom, extending higher than the gray frame) */}
+          <div className="relative z-10 w-full h-full flex items-end scale-y-125 sm:scale-y-125 justify-center pointer-events-none">
+            <img
+              src={featuresPhonesImg}
+              alt="ExamDash Connected Readiness"
+              className="w-full max-w-[340px] sm:max-w-[560px] md:max-w-[1179px] scale-x-150 md:scale-x-125 lg:max-w-[880px] h-full sm:h-[544px] object-contain object-bottom drop-shadow-2xl"
+            />
+          </div>
         </div>
       </section>
+
+      <hr className="border border-gray-300 mb-10 sm:mb-32 mt-14 sm:mt-0"/>
 
       {/* ── 5 FEATURE ROWS (# Desktop - 13) ────────────────── */}
       <section className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-28">
@@ -52,12 +57,12 @@ export default function Features() {
 
           {/* ── Row 1: RecallDash (Phone Left, Text Right) ── */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="order-2 md:order-1 flex justify-center">
-              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
+            <div className="order-1 md:order-1 flex justify-center">
+              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[16px]  sm:rounded-[16px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
                 <img
                   src={imgRecallDash}
                   alt="RecallDash"
-                  className="max-h-[300px] sm:max-h-[350px] w-auto object-contain drop-shadow-xl"
+                  className="max-h-[340px] sm:max-h-[400px] md:max-h-[460px] w-full -mb-10  object-contain drop-shadow-xl"
                 />
               </div>
             </div>
@@ -87,11 +92,11 @@ export default function Features() {
               </p>
             </div>
             <div className="order-1 md:order-2 flex justify-center">
-              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
+              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[16px]  sm:rounded-[16px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
                 <img
                   src={imgDrillMode}
                   alt="Drill Mode"
-                  className="max-h-[300px] sm:max-h-[350px] w-auto object-contain drop-shadow-xl"
+                  className="max-h-[340px] sm:max-h-[400px] md:max-h-[460px] w-full object-contain -mb-10 drop-shadow-xl"
                 />
               </div>
             </div>
@@ -99,12 +104,12 @@ export default function Features() {
 
           {/* ── Row 3: Patient Chart (Phone Left, Text Right) ── */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="order-2 md:order-1 flex justify-center">
-              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
+            <div className="order-1 md:order-1 flex justify-center">
+              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[16px]  sm:rounded-[16px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
                 <img
                   src={imgPatientChart}
                   alt="Patient Chart"
-                  className="max-h-[300px] sm:max-h-[350px] w-auto object-contain drop-shadow-xl"
+                  className="max-h-[340px] sm:max-h-[400px] md:max-h-[460px] w-full -mb-10 object-contain drop-shadow-xl"
                 />
               </div>
             </div>
@@ -133,11 +138,11 @@ export default function Features() {
               </p>
             </div>
             <div className="order-1 md:order-2 flex justify-center">
-              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
+              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[16px]  sm:rounded-[16px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
                 <img
                   src={imgBestNextStep}
                   alt="Best Next Step"
-                  className="max-h-[300px] sm:max-h-[350px] w-auto object-contain drop-shadow-xl"
+                  className="max-h-[340px] sm:max-h-[400px] md:max-h-[460px] w-full object-contain -mb-10 drop-shadow-xl"
                 />
               </div>
             </div>
@@ -145,12 +150,12 @@ export default function Features() {
 
           {/* ── Row 5: Readiness Score (Phone Left, Text Right) ── */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="order-2 md:order-1 flex justify-center">
-              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
+            <div className="order-1 md:order-1 flex justify-center">
+              <div className="bg-[#F5F5F7] border-2 border-gray-200 rounded-[16px]  sm:rounded-[16px] p-6 sm:p-10 w-full flex items-center justify-center min-h-[340px] sm:min-h-[400px] overflow-hidden shadow-2xs hover:shadow-xs transition-shadow">
                 <img
                   src={imgReadiness}
                   alt="Readiness Score"
-                  className="max-h-[340px] sm:max-h-[400px] md:max-h-[460px] w-full object-contain drop-shadow-xl"
+                  className="max-h-[340px] sm:max-h-[400px] md:max-h-[460px] w-full object-contain -mb-10 drop-shadow-xl"
                 />
               </div>
             </div>
