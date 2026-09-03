@@ -36,15 +36,7 @@ export default function FAQ() {
       answer: (
         <div className="flex flex-col gap-3">
           <p>
-            ExamDash is a professional exam-readiness platform that helps
-            candidates assess how prepared they are for supported professional
-            certification and licensing examinations.
-          </p>
-          <p>
-            Start by choosing your exam pathway and completing a readiness
-            check. ExamDash then surfaces the areas that need attention and
-            recommends a suitable next activity. After each activity, you see
-            what changed and that feeds back into the readiness loop.
+            ExamDash is a professional exam-readiness platform that helps candidates assess their preparation for certification and licensing exams. Choose your exam pathway and complete a readiness check. ExamDash highlights areas needing attention and suggests the next activity. After each activity, you see changes that update your readiness.
           </p>
         </div>
       ),
@@ -52,47 +44,51 @@ export default function FAQ() {
     {
       question: "Who is ExamDash designed for?",
       answer:
-        "ExamDash is designed for candidates studying for demanding professional certifications and licensing exams who need an objective, data-backed assessment of their progress rather than just counting completed questions.",
+        "ExamDash is for candidates preparing for professional examinations supported by the platform. The first live beta pathway is for the PEBC Evaluating Examination.",
     },
     {
       question: "When will ExamDash be available to download?",
       answer:
-        "The Android BETA is available for download on our website now for eligible testing pathways. Additional platforms and pathways will be rolled out progressively.",
+        "The Android beta is available now via direct APK download. The website promotes the Android beta: other platforms' availability will be announced when confirmed. No general launch date exists in the deck. If the question implies one, supply it or reword the question.",
     },
     {
       question: "How much will ExamDash cost?",
       answer:
-        "Beta access is currently free for invited participants. Transparent, flexible pricing tiers for supported exam pathways will be announced prior to public general release.",
+        "No pricing information exists anywhere in the deck - no plans, tiers, trial terms or beta pricing. This is one of the highest-intent questions on the page and it currently has no answer.",
     },
     {
-      question: "Which exams are currently supported?",
+      question: "What is ExamDash and how does it work?",
       answer:
-        "ExamDash is currently operating the PEBC Qualifying Examination beta pathway, with additional healthcare, project management, and finance certifications scheduled for rollout.",
+      "The first live beta pathway supports candidates preparing for the PEBC Evaluating Exam. More pathways will launch when ready."
+      ,
     },
     {
       question: "How does the Readiness Score work?",
       answer:
-        "The Readiness Score is a composite, weighted index calculated from accuracy under pressure, clinical judgment drills, spaced repetition recall intervals, and domain mastery trends.",
+        "ExamDash analyzes your assessments and preparation activities readiness checks, mission and drill results, pathway coverage, repeated mistakes, and progress to create a structured readiness view. A readiness score indicates preparation, not a guaranteed exam result."
+      ,
     },
     {
       question: "How is ExamDash different from other exam prep tools?",
       answer:
-        "Traditional tools simply test raw facts with repetitive banks. ExamDash connects diagnostics, active recall games, scenario-based drills, and trend metrics into one continuous readiness loop.",
+        "Question banks show correct answers. Videos explain concepts. Flashcards boost recall. Each helps but shows only part of your prep. ExamDash combines these signals to reveal more than just scores and tasks."
+      ,
     },
     {
       question: "Is my personal data secure and private?",
       answer:
-        "Yes. ExamDash handles study analytics and personal profile data with industry-standard encryption, strictly in compliance with our Privacy Policy. Your data is never sold or shared with third parties.",
+        "ExamDash manages personal and study data per its Privacy Policy, detailing collected info, usage, and user rights. Security details aren't included; the policy doesn't guarantee encryption or storage. Avoid security claims without engineering approval."
+      ,
     },
     {
       question: "Can I use ExamDash offline?",
       answer:
-        "Core recall drills and downloaded task packs can be completed offline and sync your performance history automatically the next time you connect to the internet.",
+        "No offline capability is described anywhere in the deck. Needs a factual answer from engineering.",
     },
     {
       question: "How long does it take to set up my study plan?",
       answer:
-        "Setup takes less than 3 minutes. Choose your target examination, set your test date, and complete a quick diagnostic to receive your customized daily sprint recommendations.",
+        "Setup has two steps: choose your exam and add your target date, then do a readiness check so ExamDash highlights key areas. The deck lacks duration. Provide the readiness check time or remove the timing promise.",
     },
   ];
 
@@ -155,7 +151,7 @@ export default function FAQ() {
             </h2>
             <p className="text-white/85 text-xs font-poppins1 md:font-poppins sm:text-[46px] max-w-[336px] sm:max-w-[652px] mb-7 sm:mb-8 leading-relaxed drop-shadow">
               You are already investing effort in your examination.
-              <br   className="hidden md:inline-block"/>
+              <br className="hidden md:inline-block" />
               ExamDash helps you understand what that effort is producing.
             </p>
             <Link
